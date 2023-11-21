@@ -1,0 +1,23 @@
+<div class="productoCarrito-wrap">
+    <article class="productoCarrito" *ngFor = "let comida of ListaProductos">
+        <div class="productoCarrito-body">
+            <p>{{comida.nombre_producto}}</p>
+        </div>
+            <div class="productoCarrito-body-info">
+                <p>$ {{ comida.precio}} </p>
+                <p>No. loca: {{ comida.local}} </p>
+            </div>
+    <div class="productoCarrito-total">
+        <p>$ {{totalProductos(comida.precio, comida.cantidad)}}</p>
+    </div>
+    <div class="productoCarrito-bottons">
+        <div class="productoCarrito-bottom-operators">
+            <i class="fa-solid fa-minus" (click)="actualizarUnidad('menos', comida.id_producto)"></i>
+            <span>{{comida.cantidad}}</span>
+            <i class="fa-solid fa-plus" (click)="actualizarUnidad('sumar', comida.id_producto)"></i>
+        </div>
+        <i class="fa-solid fa-trash" (click)="quitarProducto(comida.id_producto)"></i>
+    </div>
+    <button class="carritoBoton" (click)="onClickComprar(comida)">Comprar</button>
+    </article>
+</div>

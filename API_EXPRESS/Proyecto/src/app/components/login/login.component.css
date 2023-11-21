@@ -1,0 +1,44 @@
+/* Estilos para el contenedor principal */
+.center-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+    padding: 12px; /* Reduce el espacio interior del contenedor principal */
+    box-sizing: border-box;
+  }
+  
+  /* Estilos para el formulario */
+  .form-container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 12px; /* Reduce el espacio interior del formulario */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 270px; /* Ancho máximo reducido para hacer el formulario un 15% más pequeño */
+    text-align: center;
+    margin-bottom: 16px; /* Espacio reducido entre el formulario y el pie de página */
+  }
+  
+  .form-header img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 12px; /* Espacio reducido entre la imagen y los campos de usuario y contraseña */
+  }
+  
+  /* Estilos para los campos de entrada */
+  .mat-form-field {
+    width: 100%;
+    margin-bottom: 10px; /* Espacio reducido entre los campos de entrada */
+  }
+  
+  /* Estilos para el botón de inicio de sesión */
+  .mat-raised-button {
+    background-color: #007bff;
+    color: #fff;
+    width: 100%;
+    padding: 8px; /* Tamaño reducido del botón */
+    margin-top: 14px; /* Espacio reducido en la parte superior del botón */
+  }
+  

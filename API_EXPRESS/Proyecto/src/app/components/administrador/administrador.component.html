@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12" *ngFor="let pedido of listaPedidos">
+            <table class="table table-striped">
+                <thead>
+                    <tr class="row">
+                        <th class="col-sm-1"> ID </th>
+                        <th class="col-sm-2"> PRODUCTO </th>
+                        <th class="col-sm-2"> CANTIDAD </th>
+                        <th class="col-sm-2"> TOTAL </th>
+                        <th class="col-sm-2"> EMAIL </th>
+                        <th class="col-sm-2"> LOCAL </th>
+                        <th class="col-sm-1">  </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="row">
+                        <td class="col-sm-1"><i>{{pedido.id}}</i></td>
+                        <td class="col-sm-2"><i>{{pedido.nombre_producto}}</i></td>
+                        <td class="col-sm-2"><i>{{pedido.cantidad}}</i></td>
+                        <td class="col-sm-2"><i>{{pedido.total}}</i></td>
+                        <td class="col-sm-2"><i>{{pedido.email}}</i></td>
+                        <td class="col-sm-2"><i>{{pedido.local}}</i></td>
+                        <td class="col-sm-1">
+                            <button>correo</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+    <div class="producto" *ngFor="let comida of ListaProductos" >
+        <div class="producto-imgn">
+            <img [src] = "comida.img_url" alt="Prodcucto" width="250" height="150">
+        </div>
+        <div class="producto-nombre">
+            <h5>{{ comida.nombre_producto }}</h5>
+        </div>
+        <div class="producto-precio">
+            <p>${{ comida.precio}}</p>
+        </div>
+        <div class="producto-descripcion">
+            <p>Descripcion: {{ comida.descripcion }}</p>
+        </div>
+        <div class="producto-tiempo">
+            <p>{{ comida.tiempo }}</p>
+        </div>
+        <div class="producto-local">
+            <p>local: {{ comida.local }}</p>
+        </div>
+        <div class="boton">
+            <button (click)="onClick(comida)"><i class="fa-solid fa-basket-shopping fa-2x"></i></button>
+        </div>
+    </div>
+</div>

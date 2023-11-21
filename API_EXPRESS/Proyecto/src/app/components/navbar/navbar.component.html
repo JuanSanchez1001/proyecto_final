@@ -1,0 +1,17 @@
+<nav class="navbar">
+    <div class="navbar-logo">
+      <i class="fa-solid fa-shop fa-2x"></i>
+    </div>
+    <div class="navbar-titulo">
+      <h1>Tienda ITQ</h1>
+    </div>
+    <div class="navbar-carrito" (click) = "clickShowCarrito()">
+      <div class="carrito-items">
+        <p>0</p>
+      </div>
+      <i class="fa-solid fa-cart-shopping fa-2x"></i> 
+    </div>
+  </nav>
+  <div class="carrito" [ngClass] = "{show: viewCart}">
+    <app-carrito></app-carrito>
+  </div>

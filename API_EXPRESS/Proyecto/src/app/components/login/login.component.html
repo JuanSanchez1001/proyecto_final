@@ -1,0 +1,14 @@
+<div class="center-container">
+    <div class="form-header">
+      <img src="../assets/img/logoCafeTec.PNG" width="310" height="255">
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Usuario</label>
+      <input [(ngModel)]="user.usuario" type="text" class="form-control">
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlTextarea1" class="form-label">Contraseña</label>
+      <input [(ngModel)]="user.password" type="password" class="form-control">
+    </div>
+    <button class="btn btn-primary" (click)="login()">Ingresar</button>
+</div>
