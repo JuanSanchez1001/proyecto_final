@@ -1,5 +1,5 @@
 export interface Pedidos {
-    id?: string,
+    id_pedido?: string,
     nombre_producto: string,
     cantidad: number,
     total: number,

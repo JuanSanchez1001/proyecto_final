@@ -17,4 +17,7 @@ export class PedidosService {
     const response = this.httpClient.get<Pedidos[]>(this.BASE_URL+'/pedidos')
     return response
   }
+  getPedidoID(id: string){
+    
+  }
 }

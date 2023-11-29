@@ -1,14 +1,14 @@
 <div class="productoCarrito-wrap">
     <article class="productoCarrito" *ngFor = "let comida of ListaProductos">
         <div class="productoCarrito-body">
-            <p>{{comida.nombre_producto}}</p>
+            <p>Producto: {{comida.nombre_producto}}</p>
         </div>
             <div class="productoCarrito-body-info">
-                <p>$ {{ comida.precio}} </p>
+                <p>$ {{ comida.precio}} C/U</p>
                 <p>No. loca: {{ comida.local}} </p>
             </div>
     <div class="productoCarrito-total">
-        <p>$ {{totalProductos(comida.precio, comida.cantidad)}}</p>
+        <p>Total: $ {{totalProductos(comida.precio, comida.cantidad)}}</p>
     </div>
     <div class="productoCarrito-bottons">
         <div class="productoCarrito-bottom-operators">

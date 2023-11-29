@@ -41,7 +41,7 @@
     border:1px solid #cc1414;
     right:0px;
     min-width: 40%;
-    app-cart{
+    app-carrito{
         display: flex;
         flex-direction:column;
         justify-content: center;

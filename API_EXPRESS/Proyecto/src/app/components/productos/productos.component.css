@@ -18,7 +18,7 @@
     border-radius: 1rem;
     padding: 1rem;
     margin: 0.5rem;
-
+    width: 10cm;
     box-shadow: 10px -1px 116px -62px rgb(20, 70, 57);
 
     &-imgn{

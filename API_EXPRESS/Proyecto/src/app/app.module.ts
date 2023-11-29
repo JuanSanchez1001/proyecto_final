@@ -13,6 +13,8 @@ import { JWT_OPTIONS, JwtHelperService } from '@auth0/angular-jwt';
 import { NavbarComponent } from './components/navbar/navbar.component';
 
 import { AdministradorComponent } from './components/administrador/administrador.component';
+import { CorreoComponent } from './components/correo/correo.component';
+import { CorreoService } from './service/correo.service';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import { AdministradorComponent } from './components/administrador/administrador
     LoginComponent,
     CarritoComponent,
     NavbarComponent,
-    AdministradorComponent
+    AdministradorComponent,
+    CorreoComponent
   ],
   imports: [
     AppRoutingModule,
@@ -32,7 +35,7 @@ import { AdministradorComponent } from './components/administrador/administrador
   ],
   providers: [
     {provide: JWT_OPTIONS, useValue: JWT_OPTIONS},
-    JwtHelperService
+    JwtHelperService, CorreoService
   ],
   bootstrap: [AppComponent]
 })

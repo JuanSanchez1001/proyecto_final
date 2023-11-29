@@ -56,6 +56,19 @@ app.get('/productos', (req, res) => {
         }
     })
 })
+app.get('/pedidos/:id', (req, res) => {
+  const { id } = req.params
+  const query = `SELECT * FROM pedidos WHERE id_pedido = ${id}`
+  conexion.query(query, (error,resultado) => {
+    if(error) return console.error(error.message)
+
+    if(resultado.length > 0){
+      res.json(resultado)
+    }else{
+      res.json('No hay pedido con ese ID')
+    }
+  })
+})
 app.post('/carrito/comprar', (req, res) => {
     const lista = {
         nombre_producto: req.body.nombre_producto,
@@ -140,3 +153,34 @@ function verifyToken(req,res, next){
   }
 
 }
+
+
+//Envío de correos
+
+const nodeMailer = require('nodemailer');
+
+app.post('/envio', (req,res) => {
+  let body = req.body;
+  let config = nodeMailer.createTransport({
+    service: 'gmail',
+    auth:{
+      user:'jpacha0110@gmail.com',
+      pass:'haey yylw mqsl ffws'
+    }
+  });
+  const opciones = {
+    from: 'CafeTec',
+    subject: body.asunto,
+    to: body.email,
+    text: body.mensaje
+  };
+
+  config.sendMail(opciones, function(error, result){
+    if(error) return res.json({ok:false, msg:error})
+    
+    return res.json({
+      ok: true,
+      msg: result
+    })
+  })
+})

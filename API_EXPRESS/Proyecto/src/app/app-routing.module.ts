@@ -7,6 +7,7 @@ import { AdministradorComponent } from './components/administrador/administrador
 import { LoginGuard } from './guards/login.guard';
 import { RoleGuard } from './guards/rol.guard';
 import { LoginComponent } from './components/login/login.component';
+import { CorreoComponent } from './components/correo/correo.component';
 
 
 const routes: Routes = [

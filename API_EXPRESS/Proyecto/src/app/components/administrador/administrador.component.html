@@ -1,32 +1,32 @@
-<div class="container">
-    <div class="row">
-        <div class="col-sm-12" *ngFor="let pedido of listaPedidos">
-            <table class="table table-striped">
-                <thead>
-                    <tr class="row">
-                        <th class="col-sm-1"> ID </th>
-                        <th class="col-sm-2"> PRODUCTO </th>
-                        <th class="col-sm-2"> CANTIDAD </th>
-                        <th class="col-sm-2"> TOTAL </th>
-                        <th class="col-sm-2"> EMAIL </th>
-                        <th class="col-sm-2"> LOCAL </th>
-                        <th class="col-sm-1">  </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="row">
-                        <td class="col-sm-1"><i>{{pedido.id}}</i></td>
-                        <td class="col-sm-2"><i>{{pedido.nombre_producto}}</i></td>
-                        <td class="col-sm-2"><i>{{pedido.cantidad}}</i></td>
-                        <td class="col-sm-2"><i>{{pedido.total}}</i></td>
-                        <td class="col-sm-2"><i>{{pedido.email}}</i></td>
-                        <td class="col-sm-2"><i>{{pedido.local}}</i></td>
-                        <td class="col-sm-1">
-                            <button>correo</button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-</div>
+
+<table class="table">
+    <thead >
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">PRODUCTO</th>
+        <th scope="col">CANTIDAD</th>
+        <th scope="col">TOTAL</th>
+        <th scope="col">EMAIL</th>
+        <th scope="col">LOCAL</th>
+        <i class="fa-solid fa-door-open fa-2x" (click)="closeSession()"></i>        
+      </tr>
+    </thead>
+    <tbody *ngFor="let pedido of listaPedidos">
+      <tr (click)="clickShowEmail(pedido.id_pedido)">
+        <th scope="row" >{{pedido.id_pedido}}</th>
+            <td><i>{{pedido.nombre_producto}}</i></td>
+            <td><i>{{pedido.cantidad}}</i></td>
+            <td><i>{{pedido.total}}</i></td>
+            <td><i>{{pedido.email}}</i></td>
+            <td><i>{{pedido.local}}</i></td>
+            <td>
+                <i class="fa-regular fa-envelope" ></i>
+            </td>     
+      </tr>
+    </tbody>
+    
+  </table>
+  <div class="email popup" [ngClass]="{show: viewEmail}">
+    <app-correo [idPedido]="idPedidoSeleccionado"></app-correo>
+  </div>  
+  

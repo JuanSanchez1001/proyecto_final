@@ -1,0 +1,31 @@
+/* Añade estilos para centrar la ventana emergente */
+.popup {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Centra horizontalmente */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  background-color: white;
+  border-radius: 0.5rem;
+  border: 1px solid #cc1414;
+  min-width: 40%;
+}
+
+/* Elimina el estilo 'display: none;' para mostrar la ventana emergente */
+.show {
+  display: flex !important;
+  
+}
+
+/* Otros estilos permanecen igual */
+thead {
+  background-color: blue;
+}
+
+tbody {
+  background-color: #ffb402;
+}
