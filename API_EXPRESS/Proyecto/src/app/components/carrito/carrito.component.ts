@@ -49,7 +49,7 @@ export class CarritoComponent {
     comida.email = this.email
     
     this.carritoService.comprarCarrito(comida).subscribe(data =>{
-      alert(data);
+      alert('Pedido enviado');
       console.log(comida);
     })
   }

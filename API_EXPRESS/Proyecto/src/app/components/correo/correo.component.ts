@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 import { Correo } from 'src/app/interfaces/correo.model';
 import { CorreoService } from 'src/app/service/correo.service';
 
@@ -17,13 +18,14 @@ export class CorreoComponent {
   mensaje: string = 'El pedido con id:' + this.idPedido + 'Esta lisnto'
 
   constructor(
-    public MessageService: CorreoService
+    public MessageService: CorreoService,
+    private route: Router
   ){}
 
   contactForm(form: any){
 
     this.MessageService.sendMessage(form).subscribe(() =>{
-      console.log("Mensaje enviado correctamente")
+      alert('Correo enviado')
     })
   }
 }
