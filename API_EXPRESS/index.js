@@ -164,8 +164,8 @@ app.post('/envio', (req,res) => {
   let config = nodeMailer.createTransport({
     service: 'gmail',
     auth:{
-      user:'jpacha0110@gmail.com',
-      pass:'haey yylw mqsl ffws'
+      user:'user@gmail.com',
+      pass:'123'
     }
   });
   const opciones = {
